@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login_page.css">
+    <link rel="shortcut icon" href="../images/login.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .fa-user{
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+<body>
+    <div class="login-container">
+        <h1>Welcome Back</h1>
+        <form onsubmit="getUsername(event)">
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="dropdown-container">
+                <label for="dropdown">Choose a Topic:</label>
+                <select name="dropdown" id="dropdown">
+                    <option value="s1">Choose a Sub</option>
+                    <option value="s2">Html</option>
+                    <option value="s3">Computer Science</option>
+                    <option value="s4">Physics</option>
+                    <option value="s5">Chemistry</option>
+                    <option value="s6">Biology</option>
+                    <option value="s7">Mathematics</option>
+                </select>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+</body>
+<script src="../js/login_page.js"></script>
+</html>

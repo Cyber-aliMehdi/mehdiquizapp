@@ -1,0 +1,169 @@
+/* Background with Dark Overlay & Blur */
+body {
+    background: linear-gradient(135deg, #6C63FF, #FF6584);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Dark overlay for better contrast */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+/* Login container with Glassmorphism effect */
+.login-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 40px 60px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 0.8s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Header Styling */
+.login-container h1 {
+    font-size: 2.5rem;
+    color: #F1F1F1;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Box Styling */
+.input-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    font-size: 1rem;
+    color: #F1F1F1;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Placeholder Styling */
+.input-box input::placeholder {
+    color: #DDD;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Dropdown Label */
+.dropdown-container label {
+    display: block;
+    font-size: 1.1rem;
+    color: #F1F1F1;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Dropdown Styling */
+.dropdown-container select {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #EAEAEA;
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+/* Hover & Focus Effects */
+.dropdown-container select:hover,
+.dropdown-container select:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Options */
+.dropdown-container select option {
+    background: #2A2A2A;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+/* Login Button Styling */
+.login-btn {
+    background: linear-gradient(135deg, #0A21C0, #167DD9);
+    color: #EAEAEA;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    width: 100%;
+    border: 2px solid transparent;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #1A5FBA, #167DD9);
+    box-shadow: 0 6px 20px rgba(10, 33, 192, 0.6);
+    transform: translateY(-3px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-btn:active {
+    transform: scale(0.97);
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
